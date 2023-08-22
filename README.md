@@ -19,7 +19,7 @@ IaC のために使用するソフトウェア．
 1. terraform のインストール
    ```
    tfenv install latest
-   tfenv install {上のコマンドでインストールしたバージョン}
+   tfenv use {上のコマンドでインストールしたバージョン}
    ```
 
 ### AWS CLI
