@@ -44,3 +44,20 @@ AWS をローカルマシンから操作するための CLI ツール
    ```bash
    export AWS_PROFILE=keio-aic-databricks
    ```
+
+### Databricks CLI
+
+Databricks をローカルマシンから操作するための CLI ツール
+
+1. [公式](https://docs.databricks.com/ja/dev-tools/cli/databricks-cli.html) を見てインストールする
+1. [ドキュメント](https://docs.google.com/document/d/1wlHaxz1mEhRBz6FOAtY12qkJc_YeKAnHbCVyYE-nxas/edit#heading=h.mmqgip53656r) を参考に workspace を作成する
+1. config を設定する
+   ```
+   databricks configure --token --profile terraform-poc
+   ```
+   1. `Databricks Host` には作成した workspace の URL (https://xxx.cloud.databricks.com) を指定する
+   1. `Personal Access Token` には workspace の User Setting -> Developer -> Access tokens で生成したトークンを入力する
+1. 動作確認
+   ```
+   databricks current-user me
+   ```
