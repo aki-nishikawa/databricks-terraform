@@ -47,7 +47,9 @@ AWS をローカルマシンから操作するための CLI ツール
 
 ### Databricks CLI
 
-Databricks をローカルマシンから操作するための CLI ツール
+Databricks をローカルマシンから操作するための CLI ツール．
+
+現状あまり[ドキュメント](https://docs.databricks.com/en/dev-tools/index-cli.html)が整備されていないように見受けられる．
 
 1. [公式](https://docs.databricks.com/ja/dev-tools/cli/databricks-cli.html) を見てインストールする
 1. [ドキュメント](https://docs.google.com/document/d/1wlHaxz1mEhRBz6FOAtY12qkJc_YeKAnHbCVyYE-nxas/edit#heading=h.mmqgip53656r) を参考に workspace を作成する
