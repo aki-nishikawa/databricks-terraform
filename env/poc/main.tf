@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "5.12.0"
     }
+
+    databricks = {
+      source = "databricks/databricks"
+    }
   }
   backend "s3" {
     bucket = "keio-aic-databricks-terraform-poc-tfstate-bucket"
@@ -15,9 +19,11 @@ terraform {
 provider "aws" {
   shared_config_files      = ["~/.aws/config"]
   shared_credentials_files = ["~/.aws/credentials"]
-  profile                  = "keio-aic-databricks"
+  profile                  = var.aws_connection_profile
+  region                   = var.aws_region
 }
 
-resource "aws_s3_bucket" "test" {
-  bucket = "keio-aic-databricks-test-bucket"
+provider "databricks" {
+  profile = var.databricks_connection_profile
 }
+
