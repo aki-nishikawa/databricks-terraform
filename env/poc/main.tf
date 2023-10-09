@@ -6,9 +6,11 @@ terraform {
     }
 
     databricks = {
-      source = "databricks/databricks"
+      source  = "databricks/databricks"
+      version = "1.27.0"
     }
   }
+
   backend "s3" {
     bucket = "keio-aic-databricks-terraform-poc-tfstate-bucket"
     key    = "tfstate"
@@ -27,3 +29,7 @@ provider "databricks" {
   profile = var.databricks_connection_profile
 }
 
+
+module "cluster" {
+  source = "../../modules/compute"
+}
