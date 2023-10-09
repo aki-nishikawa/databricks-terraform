@@ -1,3 +1,5 @@
+# root module で databricks provider を定義しても他の module に databricks provider が渡らない
+# 原因はよく分からなかったので，各 module で databricks provider を定義することで対応した
 terraform {
   required_providers {
     databricks = {
