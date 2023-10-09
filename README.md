@@ -1,8 +1,9 @@
-# terraform Poc
+# Databricks Terraform POC
 
-Databricks 環境を [terraform](https://www.terraform.io/) で IaC 化できるらしいので検証する．
+Databricks 環境を terraform で IaC 化できるらしいので検証する．
+試しにクラスタの作成をしてみる．
 
-## Set up
+## セットアップ
 
 Mac OS を前提にセットアップ方法を記述する
 
